@@ -22,9 +22,9 @@ class Program
             new Student{Id=4, Name="Dung", Score=7}
         };
 
-        Console.WriteLine($"{info} | Bai 6");
-        int count6 = numbers.Count(n => n % 2 == 0);
-        Console.WriteLine("So luong so chan: " + count6);
+        Console.WriteLine($"{info} | Bai 7");
+        bool has7 = numbers.Any(n => n > 10);
+        Console.WriteLine("Co so > 10 khong? " + (has7 ? "Co" : "Khong"));
 
         Console.ReadLine();
     }
