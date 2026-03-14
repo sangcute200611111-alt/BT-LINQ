@@ -1,10 +1,31 @@
-﻿namespace BT_LINQ
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+
+class Student
 {
-    internal class Program
+    public int Id { get; set; }
+    public string Name { get; set; }
+    public double Score { get; set; }
+}
+
+class Program
+{
+    static void Main()
     {
-        static void Main(string[] args)
-        {
-            Console.WriteLine("Hello, World!");
-        }
+        string info = "Vo Van Sang | 2415053122237 | 24T2";
+        List<int> numbers = new List<int> { 1, 2, 3, 4, 5, 6, 7, 8 };
+        List<Student> students = new List<Student>() {
+            new Student{Id=1, Name="An", Score=8},
+            new Student{Id=2, Name="Binh", Score=6},
+            new Student{Id=3, Name="Chi", Score=9},
+            new Student{Id=4, Name="Dung", Score=7}
+        };
+
+        Console.WriteLine($"{info} | Bai 1");
+        var b1 = numbers.Where(n => n % 2 == 0);
+        Console.WriteLine("Cac so chan: " + string.Join(", ", b1));
+
+        Console.ReadLine();
     }
 }
