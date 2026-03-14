@@ -22,9 +22,9 @@ class Program
             new Student{Id=4, Name="Dung", Score=7}
         };
 
-        Console.WriteLine($"{info} | Bai 11");
-        var b11 = students.MaxBy(s => s.Score);
-        Console.WriteLine($"SV diem cao nhat: {b11.Name} ({b11.Score})");
+        Console.WriteLine($"{info} | Bai 12");
+        int b12 = students.Count(s => s.Score >= 7);
+        Console.WriteLine("So sinh vien dat: " + b12);
 
         Console.ReadLine();
     }
