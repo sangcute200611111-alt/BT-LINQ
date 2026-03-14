@@ -22,9 +22,9 @@ class Program
             new Student{Id=4, Name="Dung", Score=7}
         };
 
-        Console.WriteLine($"{info} | Bai 16");
-        int b16 = numbers.Sum();
-        Console.WriteLine("Tong cac so: " + b16);
+        Console.WriteLine($"{info} | Bai 17");
+        double b17 = students.Average(s => s.Score);
+        Console.WriteLine("Diem trung binh SV: " + b17);
 
         Console.ReadLine();
     }
