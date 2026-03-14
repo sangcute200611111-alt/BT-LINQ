@@ -22,15 +22,9 @@ class Program
             new Student{Id=4, Name="Dung", Score=7}
         };
 
-        Console.WriteLine($"{info} | Bai 19");
-        List<int> dupNumbers = new List<int> { 1, 2, 2, 3, 4, 4, 5 };
-
-        var groups = dupNumbers.GroupBy(n => n);
-        int maxCount = groups.Max(g => g.Count());
-
-        var mostFrequent = groups.Where(g => g.Count() == maxCount).Select(g => g.Key);
-
-        Console.WriteLine("Cac so xuat hien nhieu nhat: " + string.Join(", ", mostFrequent));
+        Console.WriteLine($"{info} | Bai 20");
+        var b20 = students.OrderByDescending(s => s.Score).Take(3);
+        Console.WriteLine("Top 3 SV: " + string.Join(", ", b20.Select(s => s.Name + "(" + s.Score + ")")));
 
         Console.ReadLine();
     }
