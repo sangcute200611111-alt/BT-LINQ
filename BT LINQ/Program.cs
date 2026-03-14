@@ -22,10 +22,9 @@ class Program
             new Student{Id=4, Name="Dung", Score=7}
         };
 
-        Console.WriteLine($"{info} | Bai 15");
-        List<int> dupNumbers = new List<int> { 1, 2, 2, 3, 4, 4, 5 };
-        var b15 = dupNumbers.Distinct();
-        Console.WriteLine("Sau khi loai trung: " + string.Join(", ", b15));
+        Console.WriteLine($"{info} | Bai 16");
+        int b16 = numbers.Sum();
+        Console.WriteLine("Tong cac so: " + b16);
 
         Console.ReadLine();
     }
