@@ -22,9 +22,9 @@ class Program
             new Student{Id=4, Name="Dung", Score=7}
         };
 
-        Console.WriteLine($"{info} | Bai 2");
-        var b2 = numbers.Where(n => n > 5);
-        Console.WriteLine("Cac so > 5: " + string.Join(", ", b2));
+        Console.WriteLine($"{info} | Bai 3");
+        var b3 = numbers.OrderBy(n => n);
+        Console.WriteLine("Tang dan: " + string.Join(", ", b3));
 
         Console.ReadLine();
     }
