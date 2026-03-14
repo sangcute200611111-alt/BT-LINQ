@@ -22,9 +22,9 @@ class Program
             new Student{Id=4, Name="Dung", Score=7}
         };
 
-        Console.WriteLine($"{info} | Bai 7");
-        bool has7 = numbers.Any(n => n > 10);
-        Console.WriteLine("Co so > 10 khong? " + (has7 ? "Co" : "Khong"));
+        Console.WriteLine($"{info} | Bai 8");
+        var b8 = students.Where(s => s.Score >= 8);
+        Console.WriteLine("Sinh vien gioi: " + string.Join(", ", b8.Select(s => s.Name)));
 
         Console.ReadLine();
     }
