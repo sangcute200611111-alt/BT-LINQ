@@ -22,9 +22,9 @@ class Program
             new Student{Id=4, Name="Dung", Score=7}
         };
 
-        Console.WriteLine($"{info} | Bai 12");
-        int b12 = students.Count(s => s.Score >= 7);
-        Console.WriteLine("So sinh vien dat: " + b12);
+        Console.WriteLine($"{info} | Bai 13");
+        var b13 = students.FirstOrDefault(s => s.Score > 7);
+        Console.WriteLine("SV dau tien > 7: " + (b13 != null ? b13.Name : "Khong co"));
 
         Console.ReadLine();
     }
