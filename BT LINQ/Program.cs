@@ -22,12 +22,15 @@ class Program
             new Student{Id=4, Name="Dung", Score=7}
         };
 
-        Console.WriteLine($"{info} | Bai 18");
-        var b18 = students.GroupBy(s => s.Score >= 8 ? "Gioi" : s.Score >= 6 ? "Kha" : "Trung binh");
-        foreach (var group in b18)
-        {
-            Console.WriteLine($"{group.Key}: {string.Join(", ", group.Select(s => s.Name))}");
-        }
+        Console.WriteLine($"{info} | Bai 19");
+        List<int> dupNumbers = new List<int> { 1, 2, 2, 3, 4, 4, 5 };
+
+        var groups = dupNumbers.GroupBy(n => n);
+        int maxCount = groups.Max(g => g.Count());
+
+        var mostFrequent = groups.Where(g => g.Count() == maxCount).Select(g => g.Key);
+
+        Console.WriteLine("Cac so xuat hien nhieu nhat: " + string.Join(", ", mostFrequent));
 
         Console.ReadLine();
     }
