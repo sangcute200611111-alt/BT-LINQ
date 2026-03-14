@@ -22,9 +22,9 @@ class Program
             new Student{Id=4, Name="Dung", Score=7}
         };
 
-        Console.WriteLine($"{info} | Bai 9");
-        var b9 = students.Select(s => s.Name);
-        Console.WriteLine("Danh sach ten: " + string.Join(" ", b9));
+        Console.WriteLine($"{info} | Bai 10");
+        var b10 = students.OrderByDescending(s => s.Score);
+        Console.WriteLine("Sap xep diem: " + string.Join(", ", b10.Select(s => s.Name + ":" + s.Score)));
 
         Console.ReadLine();
     }
