@@ -22,9 +22,9 @@ class Program
             new Student{Id=4, Name="Dung", Score=7}
         };
 
-        Console.WriteLine($"{info} | Bai 3");
-        var b3 = numbers.OrderBy(n => n);
-        Console.WriteLine("Tang dan: " + string.Join(", ", b3));
+        Console.WriteLine($"{info} | Bai 4");
+        var b4 = numbers.OrderByDescending(n => n);
+        Console.WriteLine("Giam dan: " + string.Join(", ", b4));
 
         Console.ReadLine();
     }
