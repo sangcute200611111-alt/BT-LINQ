@@ -22,9 +22,10 @@ class Program
             new Student{Id=4, Name="Dung", Score=7}
         };
 
-        Console.WriteLine($"{info} | Bai 14");
-        bool b14 = students.Any(s => s.Score < 5);
-        Console.WriteLine("Co sinh vien rot khong? " + (b14 ? "Co" : "Khong"));
+        Console.WriteLine($"{info} | Bai 15");
+        List<int> dupNumbers = new List<int> { 1, 2, 2, 3, 4, 4, 5 };
+        var b15 = dupNumbers.Distinct();
+        Console.WriteLine("Sau khi loai trung: " + string.Join(", ", b15));
 
         Console.ReadLine();
     }
